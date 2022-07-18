@@ -61,14 +61,19 @@ function Parent() {
 // Comment above code after completion
 
 function App() {
-  const [] = React.useState(true);
+  // const [] = React.useState(true);
+  const userList = users.map((user) => (
+    <li key={user.id}>
+      {user.name} | {user.id} 
+    </li>
+  ));
   return (
     
     <>
-    
+    <h1>{"JSX is cool!"}</h1>
     <img src={logo} className="App-logo" alt="logo" />
       <h3>User names</h3>
-      <ul></ul>
+      <ul>{userList}</ul>
       <button>Hide Element Below</button>
 
       <div>Toggle Challenge</div>
